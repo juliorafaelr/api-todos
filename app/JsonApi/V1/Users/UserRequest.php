@@ -18,7 +18,7 @@ class UserRequest extends ResourceRequest
     {
         return [
             'name' => ['required', 'string'],
-            'email' => ['required', 'string'],
+            'email' => 'required|unique:users',
             'password' => ['required', 'string']
         ];
     }
